@@ -1,0 +1,19 @@
+.global-container {
+  height: 100%;
+  width: 100%;
+  background-image: url("../assets/images/anomaly-detection.jpg");
+}
+
+.title-container{
+  color: lightblue;
+  text-align: center;
+}
+
+.zones-container{
+  display: flex ;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+

@@ -1,0 +1,8 @@
+<button class="submit-button" type="button" (click)="displayChart()">Display Graph</button>
+<highcharts-chart
+  [Highcharts] = "highcharts"
+  [options] = "options"
+  [(update)]="updateFlag"
+  style = "width: 100%; height: 600px; display: block;">
+</highcharts-chart>
+

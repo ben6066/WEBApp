@@ -1,0 +1,25 @@
+<div style="padding: 15px;">
+  <div>
+    <div class="dropzone" fileDragDrop (filesChangeEmiter)="onFileChange($event)">
+      <div class="text-wrapper">
+        <div class="centered">
+<!--          <input type="file" name="file" id="file" (change)="onFileChange($event.target.files)" multiple>-->
+<!--          <label for="file"><span class="textLink">{{zoneLabel}}</span></label>-->
+          <label><span class="textLink">{{zoneLabel}}</span></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="files">
+    <h3 mat-subheader>Files</h3>
+    <div class="row fileItem" *ngFor="let f of files; let ind = index">
+      <div class="col-sm-12 fileItemIconDiv" (click)="openConfirmDialog(ind);">
+        <i class="fa-6x fileItemIcon"></i>
+      </div>
+      <div class="col-sm-12 fileItemText">
+        <span>{{f.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>

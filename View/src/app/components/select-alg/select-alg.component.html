@@ -1,0 +1,19 @@
+<div class="controls-container">
+  <div>
+    <label class="select-label"> Select Algorithm: </label>
+    <select [(ngModel)]="algorithm" name="singleSelect"
+            (ngModelChange)="onChangeofAlgOptions($event)">
+      <option value="option-1">Select</option>
+      <option value="hybrid">hybrid</option>
+      <option value="reg">reg</option>
+    </select>
+  </div>
+  <button class="submit-button" type="button" (click)="onSubmit()">Upload</button>
+  <div>
+    <label class="select-label"> Select Graph: </label>
+    <select [(ngModel)]="graph" name="singleSelect"
+            (ngModelChange)="onChangeofGraphOptions($event)">
+      <option   *ngFor="let label of (graphLabels$ | async)" >{{label}}</option>
+    </select>
+  </div>
+</div>
